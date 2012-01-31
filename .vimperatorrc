@@ -1,0 +1,7 @@
+"3.3 (created: 2011/11/13 17:32:12)
+
+map J <C-d>
+map K <C-u>
+source! /home/tomasos/.vimperatorrc.local
+
+" vim: set ft=vimperator:
