@@ -1,0 +1,11 @@
+[user]
+	name = Tomas Vestelind
+	email = tomas.vestelind@consultant.volvo.com
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff
+[color]
+	ui = auto
+[mergetool "vimdiff3"]
+	cmd = vim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
