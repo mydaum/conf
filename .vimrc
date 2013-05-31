@@ -3,6 +3,13 @@ if &compatible          " only if not set before:
     set nocompatible      " use vim-defaults instead of vi-defaults (easier, more user friendly)
 endif
 
+" source cscope vim settings
+" set nocscopeverbose
+" source ~/.vim/plugin/cscope_maps.vim
+
+" Pathogen plugin
+execute pathogen#infect()
+
 " color settings (if terminal/gui supports it)
 if &t_Co > 2 || has("gui_running")
     syntax on          " enable colors

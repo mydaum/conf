@@ -194,10 +194,8 @@
 # 
 # alias cd=cd_func
 
-if [ -e /usr/share/terminfo/x/xterm-256color ]; then
-        export TERM='xterm-256color'
-else
-        export TERM='xterm-color'
+if [ -e /usr/share/terminfo/x/xterm-256color -a $TERM != 'screen-256color' ]; then
+    export TERM='xterm-256color'
 fi
 
 alias pipeclip='tee /dev/clipboard'
@@ -208,10 +206,18 @@ alias ls='ls --color=auto'                 # classify files in colour
 alias sgrep='grep -R --include=\*{c,h} * -e ' # grep source code
 
 set -o igncr
+# Set vi mode
 set -o vi
+# Following the real structure with symbolic links
+set -P
 export SHELLOPTS
 export LM_LICENSE_FILE="7789@flexlm.got.vtc.volvo.se;7791@slic8.got.vtc.volvo.se;7791@slic9.got.vtc.volvo.se;7791@slic10.got.vtc.volvo.se;c:\Devtools\flexlm\diab_4.lic;c:\Devtools\flexlm\diab_5.lic;"
 export PYTHONSTARTUP="$HOME/.pythonrc"
+export PATH="~/scripts:$PATH"
 
 # Don't tab-complete hidden files
 bind 'set match-hidden-files off' 
+
+if [ -e "${HOME}/.git-completion.bash" ] ; then
+    source "${HOME}"/.git-completion.bash
+fi 
