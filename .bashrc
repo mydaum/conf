@@ -205,7 +205,7 @@ alias la='ls -A'                              # all but . and ..
 alias ls='ls --color=auto'                 # classify files in colour
 alias sgrep='grep -R --include=\*{c,h} * -e ' # grep source code
 
-set -o igncr
+#set -o igncr
 # Set vi mode
 set -o vi
 # Following the real structure with symbolic links
