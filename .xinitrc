@@ -8,4 +8,6 @@ xmodmap ~/.Xmodmap
 dropboxd &
 
 # Start compton with inactive dim
-compton --inactive-dim 0.5
+compton --config .config/compton.conf -b
+
+awesome
