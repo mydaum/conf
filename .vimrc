@@ -25,7 +25,7 @@ set scrolloff=2         " 2 lines above/below cursor when scrolling
 " highlight columns > 80 chars long and trailing white spaces
 hi OverLength ctermbg=88
 
-" set number              " show line numbe231
+set number              " show line numbe231
 set showmatch           " show matching bracket (briefly jump)
 set matchtime=2         " show matching bracket for 0.2 seconds
 set showmode            " show mode in status bar (insert/replace/...)
