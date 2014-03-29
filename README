@@ -1,10 +1,1 @@
-PURPOSE:
-
-A folder to save cross system configuration files. 
-
-USAGE:
-
-Make symbolic links in your home folder to the files in this folder. Example:
-ln -sfn /home/mydaum/config/.!(|.)* -t /home/mydaum
-
-You might need to delete folders in the target (-t) directory if 'ln' gives an error. Also you might not want .git in your home directory as this is the 'Configurations' git repositry.
+Config files for program I use

@@ -1,11 +1,12 @@
-[user]
-	name = Tomas Vestelind
-	email = tomas.vestelind@gmail.com
 [core]
 	editor = vim
 [merge]
 	tool = vimdiff
 [color]
 	ui = auto
+[alias]
+	tree = log --graph --all --decorate --oneline
+	co = checkout
+	br = branch
 [mergetool "vimdiff3"]
 	cmd = vim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"

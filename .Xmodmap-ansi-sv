@@ -1,0 +1,10 @@
+! This file is used with an sv layout and an ANSI keyboard
+! Get <, > and | 
+keycode  49 = less greater bar bar bar bar bar
+! Use caps lock as ctrl
+remove Lock = Caps_Lock
+remove Control = Control_L
+keysym Control_L = Caps_Lock
+keysym Caps_Lock = Control_L
+add Lock = Caps_Lock
+add Control = Control_L
