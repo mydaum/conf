@@ -5,9 +5,6 @@ git_prompt_info() {
   echo " [%{\e[35m%}${ref#refs/heads/}%{\e[39m%}]"
 }
 
-# Disable beeps
-xset b off
-
 setopt prompt_subst
 
 # Nicer prompt
