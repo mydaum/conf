@@ -48,10 +48,9 @@ set bs=indent,eol,start " Allow backspacing over everything in insert mode
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR> " Clear search highlighting with space
 set tabstop=4           " number of spaces a tab counts for
 set shiftwidth=4        " spaces for autoindents
-"set expandtab           " turn a tabs into spaces
+set expandtab           " turn a tabs into spaces
 
 set fileformat=unix     " file mode is unix
-"set fileformats=unix,dos    " only detect unix file format, displays that ^M with dos files
 
 " system settings
 set tags=./tags;/       " look for tags file from cwd up to root
@@ -89,14 +88,8 @@ cab sgrep grep -R --include=\*.{c,h} * -e
 
 " file type specific settings
 if has("autocmd")
-    " For debugging
-    "set verbose=9
-
     " if bash is sh.
     let bash_is_sh=1
-
-    " change to directory of current file automatically
-    "autocmd BufEnter * lcd %:p:h
 
     " reset grouping (useful when we resource the configuration)
     if exists("#mysettings")
@@ -119,15 +112,6 @@ if has("autocmd")
         au BufReadPre,BufNewFile
                     \ *.pl,*.pm
                     \ set formatoptions=croq smartindent shiftwidth=2 softtabstop=2 cindent cinkeys='0{,0},!^F,o,O,e' " tags=./tags,tags,~/devel/tags,~/devel/C
-        " formatoption:
-        "   t - wrap text using textwidth
-        "   c - wrap comments using textwidth (and auto insert comment leader)
-        "   r - auto insert comment leader when pressing <return> in insert mode
-        "   o - auto insert comment leader when pressing 'o' or 'O'.
-        "   q - allow formatting of comments with "gq"
-        "   a - auto formatting for paragraphs
-        "   n - auto wrap numbered lists
-        "
     augroup END
 
 
