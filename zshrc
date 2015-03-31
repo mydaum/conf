@@ -15,7 +15,7 @@ setopt prompt_subst
 
 # Nicer prompt
 PS1=$'[%{\e[35m%}%m%{\e[39m%}:%{\e[39m%}%n%{\e[39m%}:%{\e[32m%}%?%{\e[39m%}] '
-RPS1=$'[%{\e[32m%}%~%{\e[39m%}]$(git_prompt_info)$(clearcase_prompt_info)'
+RPS1=$'[%{\e[32m%}%~%{\e[39m%}]$(git_prompt_info)'
 PS2=$'%_> '
                                                                                                                            # Set some shell options
 setopt                 \
