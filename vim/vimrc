@@ -99,7 +99,7 @@ if has("autocmd")
     " Put these in an autocmd group, so that we can delete them easily.
     augroup mysettings
         au FileType xslt,xml,css,html,xhtml,javascript,sh,config,c,cpp,docbook set smartindent shiftwidth=4 softtabstop=4 expandtab
-        au FileType c,cpp,java match OverLength /\%81v.\+\|\s\+$\|[^\t]\zs\t\+/
+        au FileType c,cpp,java,erlang match OverLength /\%81v.\+\|\s\+$\|[^\t]\zs\t\+/
         au FileType tex set wrap shiftwidth=2 softtabstop=2 expandtab
         au FileType python set expandtab tabstop=4 softtabstop=4 shiftwidth=4 cinwords=if,elif,else,for,while,try,except,finally,def,class nosmartindent
         au FileType python match OverLength /\%80v.\+/
