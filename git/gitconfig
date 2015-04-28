@@ -10,3 +10,6 @@
 	br = branch
 [mergetool "vimdiff3"]
 	cmd = vim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+[user]
+	name = Tomas Vestelind
+	email = tomas.vestelind@hiq.se
