@@ -1,0 +1,19 @@
+Config { font = "xft:Liberation Mono:pixelsize=12"
+         borderColor = "black",
+         border = FullB,
+         bgColor = "black",
+         fgColor = "grey",
+         position = Bottom,
+         commands = [  Run Date "%a %b %_d %H:%M:%S" "date" 10,
+                       Run StdinReader,
+                       Run BatteryP ["BAT0"]
+                           [ "-t", "<left>% (<timeleft>)",
+                             "-L", "15", "-H", "80",
+                             "-l", "red", "-h", "green", "-n", "yell",
+                             "--", "-O", "AC", "-c", "energy_full"]
+                           10,
+                    ],
+         sepChar = "%",
+         alignSep = "}{",
+         template = "%StdinReader% }{ %battery% | <fc=#ee9a00>%date%</fc> "
+        }
