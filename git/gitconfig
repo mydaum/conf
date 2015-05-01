@@ -12,3 +12,5 @@
 	cmd = vim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 [user]
 	name = Tomas Vestelind
+[push]
+	default = simple
