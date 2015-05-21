@@ -2,3 +2,4 @@ xterm*background: black
 xterm*foreground: white
 xterm*faceName: Liberation Mono
 xterm*faceSize: 10
+xterm*termName: xterm-256color
