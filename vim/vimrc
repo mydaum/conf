@@ -4,11 +4,8 @@ if &compatible          " only if not set before:
 endif
 
 " source cscope vim settings
-" set nocscopeverbose
-" source ~/.vim/plugin/cscope_maps.vim
-
-" Pathogen plugin
-execute pathogen#infect()
+set nocscopeverbose
+source ~/.vim/plugin/cscope_maps.vim
 
 " color settings (if terminal/gui supports it)
 if &t_Co > 2 || has("gui_running")
