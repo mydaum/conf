@@ -17,7 +17,8 @@ setopt prompt_subst
 PS1=$'[%{\e[35m%}%m%{\e[39m%}:%{\e[39m%}%n%{\e[39m%}:%{\e[32m%}%?%{\e[39m%}] '
 RPS1=$'[%{\e[32m%}%~%{\e[39m%}]$(git_prompt_info)'
 PS2=$'%_> '
-                                                                                                                           # Set some shell options
+
+# Set some shell options
 setopt                 \
     RM_STAR_SILENT      \
     APPEND_HISTORY      \
@@ -32,7 +33,8 @@ setopt                 \
     AUTO_MENU           \
     CHASE_LINKS         \
     AUTO_CD
-                                                                                                                           autoload -Uz up-line-or-beginning-search
+
+autoload -Uz up-line-or-beginning-search
 autoload -Uz down-line-or-beginning-search
 zle -N up-line-or-beginning-search up-line-or-beginning-search
 zle -N down-line-or-beginning-search down-line-or-beginning-search
@@ -76,4 +78,5 @@ export EDITOR=vim
 export SHELL=/bin/zsh
 
 path+=('/sbin')
+path+=('/home/$USER/bin')
 export PATH
