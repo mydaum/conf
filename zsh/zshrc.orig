@@ -81,6 +81,9 @@ export SHELL=/bin/zsh
 typeset -U path
 
 path+=('/sbin')
-path+=('/home/$USER/.cabal/bin')
+<<<<<<< HEAD
+path+=('/home/tomasos/.cabal/bin')
+=======
 path+=('/home/$USER/bin')
+>>>>>>> 5984191d332f9956ea3056d645f0f8455b37ce16
 export PATH
