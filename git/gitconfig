@@ -1,5 +1,5 @@
 [core]
-	editor = vim
+	editor = /usr/bin/vim
 [merge]
 	tool = vimdiff
 [color]
@@ -12,5 +12,6 @@
 	cmd = vim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 [user]
 	name = Tomas Vestelind
+	email = tomas.vestelind@gmail.com
 [push]
 	default = simple
