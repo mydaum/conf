@@ -75,5 +75,9 @@ export CVS_RSH=ssh
 export EDITOR=vim
 export SHELL=/bin/zsh
 
+# Keep path entries unique
+typeset -U path
+
 path+=('/sbin')
+path+=('/home/tomasos/.cabal/bin')
 export PATH
