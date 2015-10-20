@@ -8,6 +8,7 @@
 	tree = log --graph --all --decorate --oneline
 	co = checkout
 	br = branch
+	st = status
 [mergetool "vimdiff3"]
 	cmd = vim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 [user]
