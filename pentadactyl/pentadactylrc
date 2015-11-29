@@ -1,3 +1,7 @@
+"hg7166
+
+loadplugins '\.(js|penta)$'
+group user
 map -count -modes=n,v <F4> <count>:set<Space>nst!=<A-Tab>
 map -count -modes=n,v h -builtin <count>8h
 map -count -modes=n,v j -builtin <count>8j
@@ -6,5 +10,7 @@ map -count -modes=n,v l -builtin <count>8l
 map -count -modes=n,v zi -builtin <count>ZI
 map -count -modes=n,v zo -builtin <count>ZO
 map -count -modes=n,v <F5> <count>:set<Space>nss!=<A-Tab>
+set cdpath=''
+set passkeys=.*:<CR>
 
 " vim: set ft=pentadactyl:
