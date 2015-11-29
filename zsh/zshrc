@@ -1,9 +1,8 @@
 # Source config file with work specific configuraition
-if [ -f ~/.zsh/work.zshrc ];
-then
-    source ~/.zsh/work.zshrc
-else
-fi
+sourceFile() { if [ -f $1 ]; then source $1; else; fi }
+
+sourceFile ~/.zsh/work.zshrc
+sourceFile ~/.zsh/nixos.zshrc
 
 # get the name of the git branch we are on
 git_prompt_info() {
@@ -68,7 +67,7 @@ SAVEHIST=3000
 umask 2
 
 # Alias
-alias ls='/bin/ls --color=tty'
+alias ls='ls --color=tty'
 alias grep='grep --color=auto'
 
 # Env variables
