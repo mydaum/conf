@@ -7,6 +7,9 @@ endif
 set nocscopeverbose
 source ~/.vim/plugin/cscope_maps.vim
 
+" do not use absolute shell path
+set shell=zsh
+
 " color settings (if terminal/gui supports it)
 if &t_Co > 2 || has("gui_running")
     syntax on          " enable colors
