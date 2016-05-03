@@ -1,8 +1,6 @@
-# Source config file with work specific configuraition
-sourceFile() { if [ -f $1 ]; then source $1; else; fi }
-
-sourceFile ~/.zsh/work.zshrc
-sourceFile ~/.zsh/nixos.zshrc
+# Auto completion
+autoload -U +X compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
 
 # get the name of the git branch we are on
 git_prompt_info() {
@@ -45,10 +43,6 @@ bindkey "^n" history-incremental-search-forward
 bindkey -M vicmd "?" history-incremental-search-backward
 bindkey -M vicmd "/" history-incremental-search-forward
 
-# Auto completion
-autoload -U compinit
-compinit -u
-
 zstyle ':completion:*' verbose yes
 zstyle ':completion:*:descriptions' format '%B%d%b'
 zstyle ':completion:*:messages' format '%d'
@@ -80,6 +74,13 @@ export SHELL=/bin/zsh
 typeset -U path
 
 path+=('/sbin')
-path+=('/home/$USER/.cabal/bin')
-path+=('/home/$USER/bin')
+path+=('/home/tomasos/bin')
 export PATH
+
+# Source config file with work specific configuraition
+sourceFile() { if [ -f $1 ]; then source $1; else; fi }
+
+sourceFile ~/.zsh/work.zshrc
+sourceFile ~/.zsh/nixos.zshrc
+sourceFile ~/.zsh/stack.zshrc
+sourceFile ~/.zsh/livestreamer.zshrc
