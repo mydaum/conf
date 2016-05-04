@@ -26,6 +26,7 @@
         python27Packages.livestreamer
         python3
         python34Packages.nose
+        steam
         thunderbird
         unzip
         vim
