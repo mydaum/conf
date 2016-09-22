@@ -63,6 +63,7 @@ umask 2
 # Alias
 alias ls='ls --color=tty'
 alias grep='grep --color=auto'
+alias vim='nvim'
 
 # Env variables
 export KEYTIMEOUT=1
@@ -81,6 +82,4 @@ export PATH
 sourceFile() { if [ -f $1 ]; then source $1; else; fi }
 
 sourceFile ~/.zsh/work.zshrc
-sourceFile ~/.zsh/nixos.zshrc
-sourceFile ~/.zsh/stack.zshrc
 sourceFile ~/.zsh/livestreamer.zshrc
