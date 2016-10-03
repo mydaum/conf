@@ -3,9 +3,13 @@
 [merge]
 	tool = vimdiff
 [color]
-	ui = auto
+	ui = true
+	branch = auto
+	diff = auto
+	pager = true
+	status = true
 [alias]
-	tree = log --graph --all --decorate --oneline
+	tree = log --graph --all --decorate --oneline --show-signature
 	co = checkout
 	br = branch
 	st = status
@@ -13,6 +17,23 @@
 	cmd = vim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 [user]
 	name = Tomas Vestelind
-	email = tomas.vestelind@gmail.com
 [push]
 	default = simple
+[apply]
+	whitespace = strip
+[log]
+	decorate = true
+[rerere]
+	enabled = true
+	autoupdate = true
+[diff]
+	algorithm = patience
+[remote "origin"]
+	fetch = +refs/changes/*:refs/changes/origin/*
+	fetch = +refs/notes/*:refs/notes/*
+	fetch = +refs/changes/*:refs/changes/origin/*
+	fetch = +refs/notes/*:refs/notes/*
+[notes]
+	displayRef = refs/notes/*
+[gpg]
+	program = gpg2
