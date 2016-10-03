@@ -1,5 +1,5 @@
 xterm*background: black
 xterm*foreground: white
-xterm*faceName: Liberation Mono
+xterm*faceName: Literation Mono Powerline
 xterm*faceSize: 10
 xterm*termName: xterm-256color
