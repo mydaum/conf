@@ -1,1 +1,4 @@
 Some of my config files
+
+# Install fonts
+sudo apt install fonts-liberation2
