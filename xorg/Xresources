@@ -3,3 +3,4 @@ xterm*foreground: white
 xterm*faceName: Literation Mono Powerline
 xterm*faceSize: 11
 xterm*termName: xterm-256color
+xterm*selectToClipboard: true
