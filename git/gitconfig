@@ -1,7 +1,14 @@
 [core]
 	editor = vim
+	excludesfile = /home/tvestelind/.gitignore_global
 [merge]
-	tool = vimdiff
+	tool = vimdiff3
+	conflictstyle = diff3
+[mergetool "vimdiff3"]
+        prompt = false
+	cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+[difftool "vimdiff"]
+	cmd = nvim -d $LOCAL $REMOTE
 [color]
 	ui = true
 	branch = auto
@@ -13,12 +20,17 @@
 	co = checkout
 	br = branch
 	st = status
-[mergetool "vimdiff3"]
-	cmd = vim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+	rc = rebase --continue
+	mt = mergetool
+	au = add -u
+	uu = !git --no-pager diff --name-only --diff-filter=U
+	kn = checkout --theirs # "keep new" --theirs is new work
+	ko = checkout --ours # "keep old"   --ours is base branch (rebase branch)
 [user]
 	name = Tomas Vestelind
+	email = tomas.vestelind@gmail.com
 [push]
-	default = simple
+	default = current
 [apply]
 	whitespace = strip
 [log]
@@ -27,6 +39,7 @@
 	enabled = true
 	autoupdate = true
 [diff]
+	tool = vimdiff
 	algorithm = patience
 [remote "origin"]
 	fetch = +refs/changes/*:refs/changes/origin/*
